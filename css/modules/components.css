@@ -1,3 +1,4 @@
+/*** Header ***/
 .header {
   box-shadow: 0px -10px 35px -2px rgba(0, 0, 0, 0.071) inset;
   padding: var(--padding-default);
@@ -156,6 +157,13 @@
   stroke-width: 3px;
 }
 
+
+
+
+
+
+
+/*** Search Bar ***/
 .header__search {
   display: grid;
   grid-template-columns: 1.5fr auto 0.9fr auto 0.9fr auto 1.5fr;
@@ -251,10 +259,14 @@
 }
 
 
-/*** modal ***/
+
+
+
+
+/*** Modal ***/
 .modal {
   position: absolute;
-  z-index: 2;
+  z-index: 4;
   background: white;
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.09);
   border-radius: calc(var(--border-radius) * 0.5);
@@ -277,21 +289,39 @@
   width: 90%;
   max-height: 945px;
   height: 90%;
-  overflow: hidden;
+  overflow: visible;
   padding: 1.3rem;
   border-radius: calc(var(--border-radius) * 1);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-  z-index: 1001;
+  z-index: 6;
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
   will-change: transform, opacity;
+  display: flex;
+  flex-direction: column;
 }
 
 .modal--language.active {
   opacity: 1;
   visibility: visible;
   transform: translate(-50%, -50%) scale(1);
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 5;
+  display: none;
+  transition: background-color 0.3s ease;
+  will-change: background-color;
+}
+
+.modal-overlay.active {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .modal__list {
@@ -438,23 +468,6 @@
   border-radius: 4px;
 }
 
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0);
-  z-index: 1000;
-  display: none;
-  transition: background-color 0.3s ease;
-  will-change: background-color;
-}
-
-.modal-overlay.active {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
 .body-no-scroll {
   overflow: hidden;
   position: fixed;
@@ -489,12 +502,7 @@
 
 
 
-
-
-
-
-
-
+/*** Cards ***/
 .listing-sections {
   margin-block: calc(var(--size) * 3);
   padding: var(--padding-default);
@@ -621,16 +629,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
+/*** Footer ***/
 .footer {
   padding: 0.5rem 0;
   background-color: var(--secondary-color);
@@ -719,6 +718,8 @@
 
 
 
+
+
 /*** Navbar Bottom ***/
 .bottom-nav {
   position: fixed;
@@ -730,7 +731,7 @@
   background-color: #fff;
   border-top: 1px solid #ddd;
   padding: 0.6rem 0;
-  z-index: 1000;
+  z-index: 3;
 }
 
 .bottom-nav__item {
@@ -755,6 +756,8 @@
 .bottom-nav__item[aria-current="page"] {
   color: var(--primary-color);
 }
+
+
 
 
 

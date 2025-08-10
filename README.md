@@ -53,8 +53,8 @@ Recreate the visual structure of Airbnb's website using:
 
 1. **Clone the repository**
 
-        git clone https://github.com/tu-usuario/clon-airbnb-html-css.git 
-        cd clon-airbnb-html-css
+        git clone https://github.com/KathrymOriana/airbnb-clone.git 
+        cd airbnb-clone
 
 2. Open the `index.html` file in your browser.
 

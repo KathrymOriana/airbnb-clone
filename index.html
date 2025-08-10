@@ -1,15 +1,1433 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Airbnb - Clone UI | Alojamientos para vacaciones, cabañas, casas en la playa y más</title>
-    <link rel="shortcut icon" sizes="76x76" href="https://a0.muscache.com/im/pictures/airbnb-platform-assets/AirbnbPlatformAssets-Favicons/original/0d189acb-3f82-4b2c-b95f-ad1d6a803d13.png?im_w=240" type="image/png" >
+    <link rel="shortcut icon" sizes="76x76"
+        href="https://a0.muscache.com/im/pictures/airbnb-platform-assets/AirbnbPlatformAssets-Favicons/original/0d189acb-3f82-4b2c-b95f-ad1d6a803d13.png?im_w=240"
+        type="image/png">
     <link rel="stylesheet" href="./css/main.css">
 </head>
+
 <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+    <header class="header">
+        <div class="header__container o-container">
+            <a class="header__left" href="./index.html">
+                <svg width="102" height="32" viewBox="0 0 3490 1080" class="header__logo">
+                    <path
+                        d="M1494.71 456.953C1458.28 412.178 1408.46 389.892 1349.68 389.892C1233.51 389.892 1146.18 481.906 1146.18 605.892C1146.18 729.877 1233.51 821.892 1349.68 821.892C1408.46 821.892 1458.28 799.605 1494.71 754.83L1500.95 810.195H1589.84V401.588H1500.95L1494.71 456.953ZM1369.18 736.895C1295.33 736.895 1242.08 683.41 1242.08 605.892C1242.08 528.373 1295.33 474.888 1369.18 474.888C1443.02 474.888 1495.49 529.153 1495.49 605.892C1495.49 682.63 1443.8 736.895 1369.18 736.895ZM1656.11 810.195H1750.46V401.588H1656.11V810.195ZM948.912 666.715C875.618 506.859 795.308 344.664 713.438 184.809C698.623 155.177 670.554 98.2527 645.603 67.8412C609.736 24.1733 556.715 0.779785 502.915 0.779785C449.115 0.779785 396.094 24.1733 360.227 67.8412C335.277 98.2527 307.207 155.177 292.392 184.809C210.522 344.664 130.212 506.859 56.9187 666.715C47.5621 687.769 24.9504 737.675 16.3736 760.289C6.2373 787.581 0.779297 817.213 0.779297 846.845C0.779297 975.509 101.362 1079.22 235.473 1079.22C346.193 1079.22 434.3 1008.26 502.915 934.18C571.53 1008.26 659.638 1079.22 770.357 1079.22C904.468 1079.22 1005.83 975.509 1005.83 846.845C1005.83 817.213 999.593 787.581 989.457 760.289C980.88 737.675 958.268 687.769 948.912 666.715ZM502.915 810.195C447.555 738.455 396.094 649.56 396.094 577.819C396.094 506.079 446.776 470.209 502.915 470.209C559.055 470.209 610.516 508.419 610.516 577.819C610.516 647.22 558.275 738.455 502.915 810.195ZM770.357 998.902C688.362 998.902 618.032 941.557 555.741 872.656C619.966 792.541 690.826 679.121 690.826 577.819C690.826 458.513 598.04 389.892 502.915 389.892C407.79 389.892 315.784 458.513 315.784 577.819C315.784 679.098 386.145 792.478 450.144 872.593C387.845 941.526 317.491 998.902 235.473 998.902C146.586 998.902 81.0898 931.061 81.0898 846.845C81.0898 826.57 84.2087 807.856 91.2261 788.361C98.2436 770.426 120.855 720.52 130.212 701.025C203.505 541.17 282.256 380.534 364.126 220.679C378.941 191.047 403.891 141.921 422.605 119.307C442.877 94.3538 470.947 81.0975 502.915 81.0975C534.883 81.0975 562.953 94.3538 583.226 119.307C601.939 141.921 626.89 191.047 641.704 220.679C723.574 380.534 802.325 541.17 875.618 701.025C884.975 720.52 907.587 770.426 914.604 788.361C921.622 807.856 925.52 826.57 925.52 846.845C925.52 931.061 859.244 998.902 770.357 998.902ZM3285.71 389.892C3226.91 389.892 3175.97 413.098 3139.91 456.953V226.917H3045.56V810.195H3134.45L3140.69 754.83C3177.12 799.605 3226.94 821.892 3285.71 821.892C3401.89 821.892 3489.22 729.877 3489.22 605.892C3489.22 481.906 3401.89 389.892 3285.71 389.892ZM3266.22 736.895C3191.6 736.895 3139.91 682.63 3139.91 605.892C3139.91 529.153 3191.6 474.888 3266.22 474.888C3340.85 474.888 3393.32 528.373 3393.32 605.892C3393.32 683.41 3340.07 736.895 3266.22 736.895ZM2827.24 389.892C2766.15 389.892 2723.56 418.182 2699.37 456.953L2693.13 401.588H2604.24V810.195H2698.59V573.921C2698.59 516.217 2741.47 474.888 2800.73 474.888C2856.87 474.888 2888.84 513.097 2888.84 578.599V810.195H2983.19V566.903C2983.19 457.733 2923.15 389.892 2827.24 389.892ZM1911.86 460.072L1905.62 401.588H1816.73V810.195H1911.08V604.332C1911.08 532.592 1954.74 486.585 2027.26 486.585C2042.85 486.585 2058.44 488.144 2070.92 492.043V401.588C2059.22 396.91 2044.41 395.35 2028.04 395.35C1978.58 395.35 1936.66 421.177 1911.86 460.072ZM2353.96 389.892C2295.15 389.892 2244.21 413.098 2208.15 456.953V226.917H2113.8V810.195H2202.69L2208.93 754.83C2245.36 799.605 2295.18 821.892 2353.96 821.892C2470.13 821.892 2557.46 729.877 2557.46 605.892C2557.46 481.906 2470.13 389.892 2353.96 389.892ZM2334.46 736.895C2259.84 736.895 2208.15 682.63 2208.15 605.892C2208.15 529.153 2259.84 474.888 2334.46 474.888C2409.09 474.888 2461.56 528.373 2461.56 605.892C2461.56 683.41 2408.31 736.895 2334.46 736.895ZM1703.28 226.917C1669.48 226.917 1642.08 254.326 1642.08 288.13C1642.08 321.934 1669.48 349.343 1703.28 349.343C1737.09 349.343 1764.49 321.934 1764.49 288.13C1764.49 254.326 1737.09 226.917 1703.28 226.917Z"
+                        fill="currentcolor"></path>
+                </svg>
+                <svg width="30" height="32" viewBox="0 0 1007 1080" class="header__logo header__logo--min-screen">
+                    <path
+                        d="M949.278 666.715C875.957 506.859 795.615 344.664 713.713 184.809C698.893 155.177 670.813 98.2527 645.852 67.8412C609.971 24.1733 556.93 0.779785 503.109 0.779785C449.288 0.779785 396.247 24.1733 360.366 67.8412C335.406 98.2527 307.325 155.177 292.505 184.809C210.603 344.664 130.262 506.859 56.9404 666.715C47.5802 687.769 24.9598 737.675 16.3796 760.289C6.23941 787.581 0.779297 817.213 0.779297 846.845C0.779297 975.509 101.401 1079.22 235.564 1079.22C346.326 1079.22 434.468 1008.26 503.109 934.18C571.751 1008.26 659.892 1079.22 770.655 1079.22C904.817 1079.22 1006.22 975.509 1006.22 846.845C1006.22 817.213 999.979 787.581 989.839 760.289C981.259 737.675 958.638 687.769 949.278 666.715ZM503.109 810.195C447.728 738.455 396.247 649.56 396.247 577.819C396.247 506.079 446.948 470.209 503.109 470.209C559.27 470.209 610.751 508.419 610.751 577.819C610.751 647.22 558.49 738.455 503.109 810.195ZM770.655 998.902C688.628 998.902 618.271 941.557 555.955 872.656C620.205 792.541 691.093 679.121 691.093 577.819C691.093 458.513 598.271 389.892 503.109 389.892C407.947 389.892 315.906 458.513 315.906 577.819C315.906 679.098 386.294 792.478 450.318 872.593C387.995 941.526 317.614 998.902 235.564 998.902C146.642 998.902 81.1209 931.061 81.1209 846.845C81.1209 826.57 84.241 807.856 91.2611 788.361C98.2812 770.426 120.902 720.52 130.262 701.025C203.583 541.17 282.365 380.534 364.267 220.679C379.087 191.047 404.047 141.921 422.768 119.307C443.048 94.3538 471.129 81.0975 503.109 81.0975C535.09 81.0975 563.17 94.3538 583.451 119.307C602.171 141.921 627.132 191.047 641.952 220.679C723.854 380.534 802.635 541.17 875.957 701.025C885.317 720.52 907.937 770.426 914.957 788.361C921.978 807.856 925.878 826.57 925.878 846.845C925.878 931.061 859.576 998.902 770.655 998.902Z"
+                        fill="currentcolor"></path>
+                </svg>
+            </a>
+
+            <nav class="header__nav">
+                <ul class="nav__list">
+                    <li class="nav__item nav__item--active">
+                        <a class="item__link" href="./index.html">
+                            <img src="https://a0.muscache.com/im/pictures/airbnb-platform-assets/AirbnbPlatformAssets-search-bar-icons/original/4aae4ed7-5939-4e76-b100-e69440ebeae4.png?im_w=240"
+                                class="nav__icon" alt="">
+                            <span class="nav__label">Alojamientos</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="item__link" href="#">
+                            <img src="https://a0.muscache.com/im/pictures/airbnb-platform-assets/AirbnbPlatformAssets-search-bar-icons/original/e47ab655-027b-4679-b2e6-df1c99a5c33d.png?im_w=240"
+                                class="nav__icon" alt="">
+                            <span class="nav__label">Experiencias</span>
+                            <span class="nav__badge">NOVEDAD</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="item__link" href="#">
+                            <img src="https://a0.muscache.com/im/pictures/airbnb-platform-assets/AirbnbPlatformAssets-search-bar-icons/original/3d67e9a9-520a-49ee-b439-7b3a75ea814d.png?im_w=240"
+                                alt="" class="nav__icon">
+                            <span class="nav__label">Servicios</span>
+                            <span class="nav__badge">NOVEDAD</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header__right">
+                <button class="header__button header__button--link">
+                    <span class="header__host-link">
+                        Conviertete en anfitrión
+                    </span>
+                </button>
+                <button class="header__button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.5 17" aria-hidden="true" role="presentation" focusable="false" class="header__icon">
+                        <path
+                            d="M8 .25a7.77 7.77 0 0 1 7.75 7.78 7.75 7.75 0 0 1-7.52 7.72h-.25A7.75 7.75 0 0 1 .25 8.24v-.25A7.75 7.75 0 0 1 8 .25zm1.95 8.5h-3.9c.15 2.9 1.17 5.34 1.88 5.5H8c.68 0 1.72-2.37 1.93-5.23zm4.26 0h-2.76c-.09 1.96-.53 3.78-1.18 5.08A6.26 6.26 0 0 0 14.17 9zm-9.67 0H1.8a6.26 6.26 0 0 0 3.94 5.08 12.59 12.59 0 0 1-1.16-4.7l-.03-.38zm1.2-6.58-.12.05a6.26 6.26 0 0 0-3.83 5.03h2.75c.09-1.83.48-3.54 1.06-4.81zm2.25-.42c-.7 0-1.78 2.51-1.94 5.5h3.9c-.15-2.9-1.18-5.34-1.89-5.5h-.07zm2.28.43.03.05a12.95 12.95 0 0 1 1.15 5.02h2.75a6.28 6.28 0 0 0-3.93-5.07z">
+                        </path>
+                    </svg>
+                </button>
+                <div class="menu-wrapper">
+                    <button class="header__button" id="btn-menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33.5 33" aria-hidden="true" role="presentation"
+                            focusable="false" class="header__icon header__icon--menu">
+                            <g fill="none">
+                                <path d="M2 16h28M2 24h28M2 8h28"></path>
+                            </g>
+                        </svg>
+                    </button>
+                    <div class="modal modal--menu" id="modal-menu" hidden>
+                        <ul class="modal__list">
+                            <li class="modal__item">
+                                <a href="#" class="modal__link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512"><path fill="currentColor" fill-rule="evenodd" d="M334.434 206.171c0 13.516-3.435 25.318-10.288 35.397c-5.65 8.47-15.12 17.649-28.436 27.534c-7.664 5.247-12.711 10.184-15.126 14.823c-3.04 5.648-4.54 14.113-4.54 25.409h-42.666c0-17.137 1.824-29.64 5.454-37.504c4.23-9.483 13.407-19.064 27.521-28.743c6.664-5.045 11.503-10.183 14.529-15.425c3.625-5.852 5.449-12.503 5.449-19.966c0-11.899-3.539-20.766-10.594-26.624c-5.636-4.228-12.502-6.345-20.569-6.345c-13.108 0-22.59 4.339-28.436 13.009c-4.236 6.45-6.36 14.719-6.36 24.8v.304h-45.361c0-26.422 8.36-46.382 25.09-59.898c14.12-11.283 31.574-16.94 52.34-16.94c18.16 0 34.092 3.533 47.798 10.588c22.803 11.703 34.195 31.572 34.195 59.581m134.9 49.83c0 117.82-95.513 213.333-213.334 213.333c-117.82 0-213.333-95.513-213.333-213.334S138.18 42.667 256 42.667S469.334 138.179 469.334 256m-42.667 0c0-94.107-76.561-170.667-170.667-170.667S85.334 161.894 85.334 256S161.894 426.667 256 426.667S426.667 350.106 426.667 256m-170.668 69.333c-14.728 0-26.667 11.938-26.667 26.666s11.94 26.667 26.667 26.667s26.667-11.939 26.667-26.667s-11.94-26.666-26.667-26.666"/></svg>
+                                    Centro de ayuda
+                                </a>
+                            </li>
+                            <hr class="modal__division">
+                            <li class="modal__item">
+                                <a href="#" class="modal__link">
+                                    <div class="item__text">
+                                        Conviértete en anfitrión
+                                        <small class="item__description">Empieza a anfitrionar y genera ingresos adicionales, ¡es muy sencillo!</small>
+                                    </div>
+                                    <img src="https://a0.muscache.com/im/pictures/airbnb-platform-assets/AirbnbPlatformAssets-search-bar-icons/original/4aae4ed7-5939-4e76-b100-e69440ebeae4.png?im_w=240" class="nav__icon" alt="">
+                                </a>
+                            </li>
+                            <hr class="modal__division">
+                            <li class="modal__item">
+                                <a href="#" class="modal__link">Encuentra un coanfitrión</a>
+                            </li>
+                            <hr class="modal__division">
+                            <li class="modal__item">
+                                <a href="#" class="modal__link">Iniciar sesión o registrarse</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header__search o-container">
+            <div class="search-bar__item" data-modal="destinos">
+                <span class="search-bar__label">Dónde</span>
+                <input class="search-bar__value search-bar__value--input" placeholder="Explora destinos">
+            </div>
+            <hr class="search-bar__division">
+            <div class="search-bar__item" data-modal="checkin">
+                <span class="search-bar__label">Check-in</span>
+                <span class="search-bar__value">Agrega fecha</span>
+            </div>
+            <hr class="search-bar__division">
+            <div class="search-bar__item" data-modal="checkout">
+                <span class="search-bar__label">Check-out</span>
+                <span class="search-bar__value">Agrega fecha</span>
+            </div>
+            <hr class="search-bar__division">
+            <div class="search-bar__item search-bar__item--button" data-modal="huespedes">
+                <div class="search-bar__text">
+                    <span class="search-bar__label">Quién</span>
+                    <span class="search-bar__value">¿Cuántos?</span>
+                </div>
+                <button class="search-bar__button">
+                    <svg class="search-bar__icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                        <path d="m20.666 20.666 10 10"></path>
+                        <path
+                            d="m24.0002 12.6668c0 6.2593-5.0741 11.3334-11.3334 11.3334-6.2592 0-11.3333-5.0741-11.3333-11.3334 0-6.2592 5.0741-11.3333 11.3333-11.3333 6.2593 0 11.3334 5.0741 11.3334 11.3333z"
+                            fill="none"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Modales ocultos -->
+        <div class="modal" id="modal-destinos" hidden>Contenido de destinos</div>
+        <div class="modal" id="modal-checkin" hidden>Contenido de check-in</div>
+        <div class="modal" id="modal-checkout" hidden>Contenido de check-out</div>
+        <div class="modal" id="modal-huespedes" hidden>Contenido de huéspedes</div>
+
+
+    </header>
+
+    <main class="listing-sections">
+
+        <section class="listing-section o-container">
+            <div class="listing-section__header">
+                <a href="#" class="listing-section__title">Alojamientos populares en Arequipa ›</a>
+                <div class="listing-section__arrows">
+                    <button class="listing-section__arrow listing-section__arrow--left">
+                        <span data-button-content="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false"
+                                style="display: block; fill: none; height: 12px; width: 12px; stroke: currentcolor; stroke-width: 4; overflow: visible;">
+                                <path fill="none" d="M20 28 8.7 16.7a1 1 0 0 1 0-1.4L20 4"></path>
+                            </svg></span>
+                    </button>
+                    <button class="listing-section__arrow listing-section__arrow--right">
+                        <span data-button-content="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false"
+                                style="display: block; fill: none; height: 12px; width: 12px; stroke: currentcolor; stroke-width: 4; overflow: visible;">
+                                <path fill="none" d="m12 4 11.3 11.3a1 1 0 0 1 0 1.4L12 28"></path>
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="listing-section__carousel">
+                <article class="listing-card">
+                    <div class="listing-card__image-wrapper">
+                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1356051433868499128/original/0fd56ba5-394c-40c8-8f4c-ec3bfcf942b8.jpeg?im_w=720"
+                            alt="Apartamento en Sachaca" class="listing-card__image">
+                        <div class="listing-card__badge">Favorito entre huéspedes</div>
+                        <button class="listing-card__like">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false" class="listing-card__icon">
+                                <path
+                                    d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 class="listing-card__title">Apartamento en Sachaca</h3>
+                    <p class="listing-card__info">S/280 por 2 noches • ★ 5.0</p>
+                </article>
+
+                <article class="listing-card">
+                    <div class="listing-card__image-wrapper">
+                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTM3NjA1ODA3MjUyNTIwMjMzOA==/original/adcfd591-002a-40c9-afd3-641f59c513f4.jpeg?im_w=720"
+                            alt="Apartamento en Cerro Colorado" class="listing-card__image">
+                        <div class="listing-card__badge">Favorito entre huéspedes</div>
+                        <button class="listing-card__like">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false" class="listing-card__icon">
+                                <path
+                                    d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 class="listing-card__title">Apartamento en Cerro Colorado</h3>
+                    <p class="listing-card__info">S/286 por 2 noches • ★ 4.9</p>
+                </article>
+
+                <article class="listing-card">
+                    <div class="listing-card__image-wrapper">
+                        <img src="https://a0.muscache.com/im/pictures/miso/Hosting-1460286700578194153/original/05f1d2bc-fdd4-47a7-9638-904c47beca36.jpeg?im_w=720"
+                            alt="Apartamento en Yanahuara" class="listing-card__image">
+                        <div class="listing-card__badge">Favorito entre huéspedes</div>
+                        <button class="listing-card__like">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false" class="listing-card__icon">
+                                <path
+                                    d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 class="listing-card__title">Apartamento en Yanahuara</h3>
+                    <p class="listing-card__info">S/203 por 2 noches • ★ 5.0</p>
+                </article>
+
+                <article class="listing-card">
+                    <div class="listing-card__image-wrapper">
+                        <img src="https://a0.muscache.com/im/pictures/miso/Hosting-1460254749532430010/original/9d3ee509-1e0f-4635-a267-f7374879b022.jpeg?im_w=720"
+                            alt="Apartamento en Yanahuara" class="listing-card__image">
+                        <div class="listing-card__badge">Favorito entre huéspedes</div>
+                        <button class="listing-card__like">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false" class="listing-card__icon">
+                                <path
+                                    d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 class="listing-card__title">Apartamento en Yanahuara</h3>
+                    <p class="listing-card__info">S/306 por 2 noches • ★ 5.0</p>
+                </article>
+
+                <article class="listing-card">
+                    <div class="listing-card__image-wrapper">
+                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1197828012700455635/original/d0650309-ab03-45e6-9011-93fac117cb34.jpeg?im_w=720"
+                            alt="Apartamento en Arequipa" class="listing-card__image">
+                        <div class="listing-card__badge">Favorito entre huéspedes</div>
+                        <button class="listing-card__like">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false" class="listing-card__icon">
+                                <path
+                                    d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 class="listing-card__title">Apartamento en Arequipa</h3>
+                    <p class="listing-card__info">S/263 por 2 noches • ★ 4.98</p>
+                </article>
+
+                <article class="listing-card">
+                    <div class="listing-card__image-wrapper">
+                        <img src="https://a0.muscache.com/im/pictures/miso/Hosting-1433602490154421868/original/3142db58-7c5c-4b36-903a-2d8797c85c3d.jpeg?im_w=720"
+                            alt="Apartamento en Cerro Colorado" class="listing-card__image">
+                        <div class="listing-card__badge">Favorito entre huéspedes</div>
+                        <button class="listing-card__like">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false" class="listing-card__icon">
+                                <path
+                                    d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 class="listing-card__title">Apartamento en Cerro Colorado</h3>
+                    <p class="listing-card__info">S/374 por 2 noches • ★ 5.0</p>
+                </article>
+
+                <article class="listing-card">
+                    <div class="listing-card__image-wrapper">
+                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1278269511713983329/original/870bc457-ece4-4f43-a672-2c84bd333896.jpeg?im_w=720"
+                            alt="Apartamento en Arequipa" class="listing-card__image">
+                        <div class="listing-card__badge">Favorito entre huéspedes</div>
+                        <button class="listing-card__like">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false" class="listing-card__icon">
+                                <path
+                                    d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 class="listing-card__title">Apartamento en Arequipa</h3>
+                    <p class="listing-card__info">S/385 por 2 noches • ★ 4.95</p>
+                </article>
+
+                <article class="listing-card">
+                    <div class="listing-card__image-wrapper">
+                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1460323415171496287/original/58944035-432f-4ae3-b53c-70436790fb6a.jpeg?im_w=720"
+                            alt="Condo en Arequipa" class="listing-card__image">
+                        <div class="listing-card__badge">Favorito entre huéspedes</div>
+                        <button class="listing-card__like">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false" class="listing-card__icon">
+                                <path
+                                    d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 class="listing-card__title">Condo en Arequipa</h3>
+                    <p class="listing-card__info">S/199 por 2 noches • ★ 4.86</p>
+                </article>
+
+                <article class="listing-card">
+                    <div class="listing-card__image-wrapper">
+                        <img src="https://a0.muscache.com/im/pictures/miso/Hosting-780302800815579796/original/2c1eb0dc-96fe-4336-83d3-1bc1edbf5a4b.jpeg?im_w=720"
+                            alt="Hotel en Arequipa" class="listing-card__image">
+                        <button class="listing-card__like">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false" class="listing-card__icon">
+                                <path
+                                    d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 class="listing-card__title">Hotel en Arequipa</h3>
+                    <p class="listing-card__info">S/119 por 2 noches • ★ 4.82</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="listing-section o-container">
+            <div class="listing-section__header">
+                <a href="#" class="listing-section__title">Disponibles el próximo mes cerca de Cuzco ›</a>
+                <div class="listing-section__arrows">
+                    <button class="listing-section__arrow listing-section__arrow--left">
+                        <span data-button-content="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false"
+                                style="display: block; fill: none; height: 12px; width: 12px; stroke: currentcolor; stroke-width: 4; overflow: visible;">
+                                <path fill="none" d="M20 28 8.7 16.7a1 1 0 0 1 0-1.4L20 4"></path>
+                            </svg></span>
+                    </button>
+                    <button class="listing-section__arrow listing-section__arrow--right">
+                        <span data-button-content="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false"
+                                style="display: block; fill: none; height: 12px; width: 12px; stroke: currentcolor; stroke-width: 4; overflow: visible;">
+                                <path fill="none" d="m12 4 11.3 11.3a1 1 0 0 1 0 1.4L12 28"></path>
+                            </svg></span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="listing-section__carousel">
+                <article class="listing-card">
+                    <div class="listing-card__image-wrapper">
+                        <img src="https://a0.muscache.com/im/pictures/miso/Hosting-1434132902109689748/original/669bfb5c-be19-4964-934d-186bb4ff2a61.jpeg?im_w=720"
+                            alt="Condo en Cusco" class="listing-card__image">
+                        <div class="listing-card__badge">Favorito entre huéspedes</div>
+                        <button class="listing-card__like">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false" class="listing-card__icon">
+                                <path
+                                    d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 class="listing-card__title">Condo en Cusco</h3>
+                    <p class="listing-card__info">S/227 por 2 noches • ★ 5.0</p>
+                </article>
+
+                <article class="listing-card">
+                    <div class="listing-card__image-wrapper">
+                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1422089576773546934/original/f1c9b686-19fc-41e1-a8d5-1d895e405235.jpeg?im_w=720"
+                            alt="Habitación en Cusco" class="listing-card__image">
+                        <div class="listing-card__badge">Favorito entre huéspedes</div>
+                        <button class="listing-card__like">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false" class="listing-card__icon">
+                                <path
+                                    d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 class="listing-card__title">Habitación en Cusco</h3>
+                    <p class="listing-card__info">S/195 por 2 noches • ★ 5.0</p>
+                </article>
+
+                <article class="listing-card">
+                    <div class="listing-card__image-wrapper">
+                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1322632651446772181/original/e04d40d5-bac5-44b2-8f73-b0878dff3803.jpeg?im_w=720" alt="Apartamento en Cusco" class="listing-card__image">
+                        <div class="listing-card__badge">Favorito entre huéspedes</div>
+                        <button class="listing-card__like">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false" class="listing-card__icon">
+                                <path
+                                    d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 class="listing-card__title">Apartamento en Cusco</h3>
+                    <p class="listing-card__info">S/245 por 2 noches • ★ 5.0</p>
+                </article>
+
+                <article class="listing-card">
+                    <div class="listing-card__image-wrapper">
+                        <img src="https://a0.muscache.com/im/pictures/miso/Hosting-1462354378564079040/original/dd4873b0-09b9-4c43-b38d-02a363a112d9.jpeg?im_w=720" alt="Apartamento en Cusco" class="listing-card__image">
+                        <div class="listing-card__badge">Favorito entre huéspedes</div>
+                        <button class="listing-card__like">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false" class="listing-card__icon">
+                                <path
+                                    d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 class="listing-card__title">Apartamento en Cusco</h3>
+                    <p class="listing-card__info">S/257 por 2 noches • ★ 5.0</p>
+                </article>
+
+                <article class="listing-card">
+                    <div class="listing-card__image-wrapper">
+                        <img src="https://a0.muscache.com/im/pictures/miso/Hosting-640506548881571441/original/636e7cf4-d23b-45df-b5ec-83723a074ec6.jpeg?im_w=720" alt="Habitación en Cusco" class="listing-card__image">
+                        <div class="listing-card__badge">Favorito entre huéspedes</div>
+                        <button class="listing-card__like">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false" class="listing-card__icon">
+                                <path
+                                    d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 class="listing-card__title">Habitación en Cusco</h3>
+                    <p class="listing-card__info">S/89 por 2 noches • ★ 4.81</p>
+                </article>
+
+                <article class="listing-card">
+                    <div class="listing-card__image-wrapper">
+                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTQ1OTcxODc0NDc1Mzk0NDAxNg==/original/6b02496a-1063-49cb-b867-aeea96f40f31.jpeg?im_w=720" alt="Apartamento en Cusco" class="listing-card__image">
+                        <div class="listing-card__badge">Favorito entre huéspedes</div>
+                        <button class="listing-card__like">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false" class="listing-card__icon">
+                                <path
+                                    d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 class="listing-card__title">Apartamento en Cusco</h3>
+                    <p class="listing-card__info">S/122 por 2 noches • ★ 5.0</p>
+                </article>
+
+                <article class="listing-card">
+                    <div class="listing-card__image-wrapper">
+                        <img src="https://a0.muscache.com/im/pictures/miso/Hosting-1396759097907462004/original/2be7bd9c-bbd8-4be0-91e9-c64a63f379ef.jpeg?im_w=720" alt="Habitación en Cusco" class="listing-card__image">
+                        <div class="listing-card__badge">Favorito entre huéspedes</div>
+                        <button class="listing-card__like">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false" class="listing-card__icon">
+                                <path
+                                    d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 class="listing-card__title">Habitación en Cusco</h3>
+                    <p class="listing-card__info">S/136 por 2 noches • ★ 4.92</p>
+                </article>
+
+                <article class="listing-card">
+                    <div class="listing-card__image-wrapper">
+                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1472104153559469458/original/1fec810c-610b-4882-aefd-f689cc48da01.jpeg?im_w=720" alt="Apartamento en Cusco" class="listing-card__image">
+                        <div class="listing-card__badge">Favorito entre huéspedes</div>
+                        <button class="listing-card__like">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false" class="listing-card__icon">
+                                <path
+                                    d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 class="listing-card__title">Apartamento en Cusco</h3>
+                    <p class="listing-card__info">S/354 por 2 noches • ★ 5.0</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="listing-section o-container">
+            <div class="listing-section__header">
+                <a href="#" class="listing-section__title">Quédate en Santiago ›</a>
+                <div class="listing-section__arrows">
+                    <button class="listing-section__arrow listing-section__arrow--left">
+                        <span data-button-content="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false"
+                                style="display: block; fill: none; height: 12px; width: 12px; stroke: currentcolor; stroke-width: 4; overflow: visible;">
+                                <path fill="none" d="M20 28 8.7 16.7a1 1 0 0 1 0-1.4L20 4"></path>
+                            </svg></span>
+                    </button>
+                    <button class="listing-section__arrow listing-section__arrow--right">
+                        <span data-button-content="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false"
+                                style="display: block; fill: none; height: 12px; width: 12px; stroke: currentcolor; stroke-width: 4; overflow: visible;">
+                                <path fill="none" d="m12 4 11.3 11.3a1 1 0 0 1 0 1.4L12 28"></path>
+                            </svg></span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="listing-section__carousel">
+                <article class="listing-card">
+                    <div class="listing-card__image-wrapper">
+                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1432985246836449364/original/53c8d195-ddfe-4cf3-9bde-a8cf92e334c3.jpeg?im_w=720" alt="Apartamento en Centro Histórico" class="listing-card__image">
+                        <div class="listing-card__badge">Favorito entre huéspedes</div>
+                        <button class="listing-card__like">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false" class="listing-card__icon">
+                                <path
+                                    d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 class="listing-card__title">Apartamento en Centro Histórico</h3>
+                    <p class="listing-card__info">S/249 por 2 noches • ★ 5.0</p>
+                </article>
+                
+                <article class="listing-card">
+                    <div class="listing-card__image-wrapper">
+                        <img src="https://a0.muscache.com/im/pictures/miso/Hosting-1356540604418194101/original/14280fb5-2b7e-42f0-beab-7245b8d35c49.jpeg?im_w=720" alt="Apartamento en Centro Histórico" class="listing-card__image">
+                        <div class="listing-card__badge">Favorito entre huéspedes</div>
+                        <button class="listing-card__like">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false" class="listing-card__icon">
+                                <path
+                                    d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 class="listing-card__title">Apartamento en Centro Histórico</h3>
+                    <p class="listing-card__info">S/278 por 2 noches • ★ 5.0</p>
+                </article>
+
+                <article class="listing-card">
+                    <div class="listing-card__image-wrapper">
+                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1039959854989234813/original/7df70776-db44-4115-a446-b219a841342b.jpeg?im_w=720" alt="Lugar para quedarse en Santiago" class="listing-card__image">
+                        <div class="listing-card__badge">Favorito entre huéspedes</div>
+                        <button class="listing-card__like">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false" class="listing-card__icon">
+                                <path
+                                    d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 class="listing-card__title">Lugar para quedarse en Santiago</h3>
+                    <p class="listing-card__info">S/140 por 2 noches • ★ 4.95</p>
+                </article>
+
+                <article class="listing-card">
+                    <div class="listing-card__image-wrapper">
+                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6NDA0MDIzMjE=/original/7d864f94-c4e1-41d9-887b-726309bfc874.jpeg?im_w=720" alt="Apartamento en Santiago" class="listing-card__image">
+                        <div class="listing-card__badge">Favorito entre huéspedes</div>
+                        <button class="listing-card__like">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false" class="listing-card__icon">
+                                <path
+                                    d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 class="listing-card__title">Apartamento en Santiago</h3>
+                    <p class="listing-card__info">S/218 por 2 noches • ★ 5.0</p>
+                </article>
+
+                <article class="listing-card">
+                    <div class="listing-card__image-wrapper">
+                        <img src="https://a0.muscache.com/im/pictures/miso/Hosting-1434848793098546363/original/b33f7e79-5a3e-4884-8eca-11a21af1f84c.jpeg?im_w=720" alt="Apartamento en Santiago" class="listing-card__image">
+                        <div class="listing-card__badge">Favorito entre huéspedes</div>
+                        <button class="listing-card__like">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false" class="listing-card__icon">
+                                <path
+                                    d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 class="listing-card__title">Apartamento en Santiago</h3>
+                    <p class="listing-card__info">S/353 por 2 noches • ★ 5.0</p>
+                </article>
+
+                <article class="listing-card">
+                    <div class="listing-card__image-wrapper">
+                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTM1NTIxMDAwODM4NDI1MTY3OA==/original/750dba7f-4421-4cd4-a279-ba20996d08e7.jpeg?im_w=720" alt="Apartamento en Santiago" class="listing-card__image">
+                        <div class="listing-card__badge">Favorito entre huéspedes</div>
+                        <button class="listing-card__like">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false" class="listing-card__icon">
+                                <path
+                                    d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 class="listing-card__title">Apartamento en Santiago</h3>
+                    <p class="listing-card__info">S/261 por 2 noches • ★ 5.0</p>
+                </article>
+
+                <article class="listing-card">
+                    <div class="listing-card__image-wrapper">
+                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1344568265942412294/original/1d6d8096-de97-4529-b1c3-1b6e137b01d6.jpeg?im_w=720" alt="Apartamento en Santiago" class="listing-card__image">
+                        <div class="listing-card__badge">Favorito entre huéspedes</div>
+                        <button class="listing-card__like">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false" class="listing-card__icon">
+                                <path
+                                    d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 class="listing-card__title">Apartamento en Santiago</h3>
+                    <p class="listing-card__info">S/262 por 2 noches • ★ 4.94</p>
+                </article>
+
+                <article class="listing-card">
+                    <div class="listing-card__image-wrapper">
+                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1419062988269634820/original/6c8c4c08-3a9b-44a8-98e5-f70abcbcf456.jpeg?im_w=720" alt="Apartamento en Santiago" class="listing-card__image">
+                        <div class="listing-card__badge">Favorito entre huéspedes</div>
+                        <button class="listing-card__like">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false" class="listing-card__icon">
+                                <path
+                                    d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 class="listing-card__title">Apartamento en Santiago</h3>
+                    <p class="listing-card__info">S/370 por 2 noches • ★ 5.0</p>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="listing-section o-container">
+            <div class="listing-section__header">
+                <a href="#" class="listing-section__title">Disponibles cerca de Oxapampa este fin de semana ›</a>
+                <div class="listing-section__arrows">
+                    <button class="listing-section__arrow listing-section__arrow--left">
+                        <span data-button-content="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false"
+                                style="display: block; fill: none; height: 12px; width: 12px; stroke: currentcolor; stroke-width: 4; overflow: visible;">
+                                <path fill="none" d="M20 28 8.7 16.7a1 1 0 0 1 0-1.4L20 4"></path>
+                            </svg></span>
+                    </button>
+                    <button class="listing-section__arrow listing-section__arrow--right">
+                        <span data-button-content="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false"
+                                style="display: block; fill: none; height: 12px; width: 12px; stroke: currentcolor; stroke-width: 4; overflow: visible;">
+                                <path fill="none" d="m12 4 11.3 11.3a1 1 0 0 1 0 1.4L12 28"></path>
+                            </svg></span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="listing-section__carousel">
+                <article class="listing-card">
+                    <div class="listing-card__image-wrapper">
+                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1374579998414566226/original/3a393c3c-fdca-4513-a5fe-1112469dcceb.jpeg?im_w=720" alt="Domo en Oxapampa" class="listing-card__image">
+                        <div class="listing-card__badge">Favorito entre huéspedes</div>
+                        <button class="listing-card__like">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false" class="listing-card__icon">
+                                <path
+                                    d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 class="listing-card__title">Domo en Oxapampa</h3>
+                    <p class="listing-card__info">S/152 por 1 noche • ★ 5.0</p>
+                </article>
+                
+                <article class="listing-card">
+                    <div class="listing-card__image-wrapper">
+                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1215894085282890872/original/632e7bc9-e72e-4332-8247-0185a42e5abf.jpeg?im_w=720" alt="Habitación de hotel en Oxapampa" class="listing-card__image">
+                        <div class="listing-card__badge">Favorito entre huéspedes</div>
+                        <button class="listing-card__like">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false" class="listing-card__icon">
+                                <path
+                                    d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 class="listing-card__title">Habitación de hotel en Oxapampa</h3>
+                    <p class="listing-card__info">S/123 por 1 noche • ★ 4.87</p>
+                </article>
+
+                <article class="listing-card">
+                    <div class="listing-card__image-wrapper">
+                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6OTQ4NjEyODA2ODE2MzAxMjky/original/9c98e31d-cb17-486f-a312-6028ad521f07.jpeg?im_w=720" alt="Habitación en Oxapampa" class="listing-card__image">
+                        <div class="listing-card__badge">Favorito entre huéspedes</div>
+                        <button class="listing-card__like">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false" class="listing-card__icon">
+                                <path
+                                    d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 class="listing-card__title">Habitación en Oxapampa</h3>
+                    <p class="listing-card__info">S/90 por 1 noche • ★ 5.0</p>
+                </article>
+
+                <article class="listing-card">
+                    <div class="listing-card__image-wrapper">
+                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTMyMDQyMDkzNzY1MTA1Nzc2Nw%3D%3D/original/25bd2db5-192c-421d-b80d-8cefc515f0f6.jpeg?im_w=720" alt="Habitación en Oxapampa" class="listing-card__image">
+                        <button class="listing-card__like">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false" class="listing-card__icon">
+                                <path
+                                    d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 class="listing-card__title">Habitación en Oxapampa</h3>
+                    <p class="listing-card__info">S/105 por 1 noches • ★ 5.0</p>
+                </article>
+
+                <article class="listing-card">
+                    <div class="listing-card__image-wrapper">
+                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1208285235263008572/original/546f6cd4-2b8a-49ce-bf96-717e9283da67.jpeg?im_w=720" alt="Habitación en Oxapampa" class="listing-card__image">
+                        <button class="listing-card__like">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false" class="listing-card__icon">
+                                <path
+                                    d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 class="listing-card__title">Habitación en Oxapampa</h3>
+                    <p class="listing-card__info">S/123 por 1 noche • ★ 5.0</p>
+                </article>
+
+                <article class="listing-card">
+                    <div class="listing-card__image-wrapper">
+                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1216704918079428179/original/723b4d62-415c-4589-835f-95724bfe677f.jpeg?im_w=720" alt="Apartamento en Villa Rica" class="listing-card__image">
+                        <div class="listing-card__badge">Favorito entre huéspedes</div>
+                        <button class="listing-card__like">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false" class="listing-card__icon">
+                                <path
+                                    d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 class="listing-card__title">Apartamento en Villa Rica</h3>
+                    <p class="listing-card__info">S/170 por 1 noche • ★ 5.0</p>
+                </article>
+
+                <article class="listing-card">
+                    <div class="listing-card__image-wrapper">
+                        <img src="https://a0.muscache.com/im/pictures/8cc46730-f809-4af5-a0cd-3b80d59ffd5e.jpg?im_w=720" alt="Habitación en Villa Rica" class="listing-card__image">
+                        <div class="listing-card__badge">Favorito entre huéspedes</div>
+                        <button class="listing-card__like">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false" class="listing-card__icon">
+                                <path
+                                    d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 class="listing-card__title">Habitación en Villa Rica</h3>
+                    <p class="listing-card__info">S/234 por 1 noche • ★ 5.0</p>
+                </article>
+
+                <article class="listing-card">
+                    <div class="listing-card__image-wrapper">
+                        <img src="https://a0.muscache.com/im/pictures/miso/Hosting-1115302452764022541/original/7e1cef88-d139-4d94-96fd-f482df885543.jpeg?im_w=720" alt="Casa de huéspedes en Villa Rica" class="listing-card__image">
+                        <div class="listing-card__badge">Favorito entre huéspedes</div>
+                        <button class="listing-card__like">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false" class="listing-card__icon">
+                                <path
+                                    d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 class="listing-card__title">Casa de huéspedes en Villa Rica</h3>
+                    <p class="listing-card__info">S/62 por 1 noche • ★ 5.0</p>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="listing-section o-container">
+            <div class="listing-section__header">
+                <a href="#" class="listing-section__title">Lugares para quedarse cerca de Yauyos ›</a>
+                <div class="listing-section__arrows">
+                    <button class="listing-section__arrow listing-section__arrow--left">
+                        <span data-button-content="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false"
+                                style="display: block; fill: none; height: 12px; width: 12px; stroke: currentcolor; stroke-width: 4; overflow: visible;">
+                                <path fill="none" d="M20 28 8.7 16.7a1 1 0 0 1 0-1.4L20 4"></path>
+                            </svg></span>
+                    </button>
+                    <button class="listing-section__arrow listing-section__arrow--right">
+                        <span data-button-content="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false"
+                                style="display: block; fill: none; height: 12px; width: 12px; stroke: currentcolor; stroke-width: 4; overflow: visible;">
+                                <path fill="none" d="m12 4 11.3 11.3a1 1 0 0 1 0 1.4L12 28"></path>
+                            </svg></span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="listing-section__carousel">
+                <article class="listing-card">
+                    <div class="listing-card__image-wrapper">
+                        <img src="https://a0.muscache.com/im/pictures/miso/Hosting-894848493580699994/original/84c728d5-6fa9-466f-b4d4-d197f4d40b7a.jpeg?im_w=720" alt="Cabaña en Huangascar" class="listing-card__image">
+                        <div class="listing-card__badge">Favorito entre huéspedes</div>
+                        <button class="listing-card__like">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false" class="listing-card__icon">
+                                <path
+                                    d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 class="listing-card__title">Cabaña en Huangascar</h3>
+                    <p class="listing-card__info">S/724 por 2 noches • ★ 4.94</p>
+                </article>
+                
+                <article class="listing-card">
+                    <div class="listing-card__image-wrapper">
+                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTE4MjUyMTgzMDQwNjc5MzY5Nw%3D%3D/original/f8ad37b5-a184-4dbc-bf1a-ec3cd64d18e0.jpeg?im_w=720" alt="Casa de campo en Lunahuaná" class="listing-card__image">
+                        <div class="listing-card__badge">Favorito entre huéspedes</div>
+                        <button class="listing-card__like">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false" class="listing-card__icon">
+                                <path
+                                    d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 class="listing-card__title">Casa de campo en Lunahuaná</h3>
+                    <p class="listing-card__info">S/1,016 por 2 noches • ★ 4.92</p>
+                </article>
+
+                <article class="listing-card">
+                    <div class="listing-card__image-wrapper">
+                        <img src="https://a0.muscache.com/im/pictures/miso/Hosting-42254841/original/dacb818a-a7f9-4b78-929b-0e5c0d043472.jpeg?im_w=720" alt="Casa de campo en Zúñiga" class="listing-card__image">
+                        <div class="listing-card__badge">Favorito entre huéspedes</div>
+                        <button class="listing-card__like">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false" class="listing-card__icon">
+                                <path
+                                    d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 class="listing-card__title">Casa de campo en Zúñiga</h3>
+                    <p class="listing-card__info">S/1,701 por 2 noches • ★ 4.88</p>
+                </article>
+
+                <article class="listing-card">
+                    <div class="listing-card__image-wrapper">
+                        <img src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-1266107241069035797/original/72f752a1-a5a8-4347-8a57-183b3b6f16ed.jpeg?im_w=720" alt="Apartamento en Lunahuaná" class="listing-card__image">
+                        <div class="listing-card__badge">Favorito entre huéspedes</div>
+                        <button class="listing-card__like">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false" class="listing-card__icon">
+                                <path
+                                    d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 class="listing-card__title">Apartamento en Lunahuaná</h3>
+                    <p class="listing-card__info">S/2,756 por 2 noches • ★ 5.0</p>
+                </article>
+
+                <article class="listing-card">
+                    <div class="listing-card__image-wrapper">
+                        <img src="https://a0.muscache.com/im/pictures/miso/Hosting-623414677091331556/original/563975ad-fd2c-47b4-808b-97ef00f0fcae.jpeg?im_w=720" alt="Casa de campo en Lunahuaná" class="listing-card__image">
+                        <div class="listing-card__badge">Favorito entre huéspedes</div>
+                        <button class="listing-card__like">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false" class="listing-card__icon">
+                                <path
+                                    d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 class="listing-card__title">Casa de campo en Lunahuaná</h3>
+                    <p class="listing-card__info">S/1,400 por 2 noches • ★ 4.93</p>
+                </article>
+
+                <article class="listing-card">
+                    <div class="listing-card__image-wrapper">
+                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1228278716688990198/original/e6e14157-5c07-4887-883e-48c7253942c4.jpeg?im_w=720" alt="Alojamiento en Lunahuaná" class="listing-card__image">
+                        <div class="listing-card__badge">Favorito entre huéspedes</div>
+                        <button class="listing-card__like">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false" class="listing-card__icon">
+                                <path
+                                    d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 class="listing-card__title">Alojamiento en Lunahuaná</h3>
+                    <p class="listing-card__info">S/1,296 por 2 noches • ★ 5.0</p>
+                </article>
+
+                <article class="listing-card">
+                    <div class="listing-card__image-wrapper">
+                        <img src="https://a0.muscache.com/im/pictures/miso/Hosting-676090883443182737/original/3a6b6859-0e97-4e46-805c-dd7612112c23.jpeg?im_w=720" alt="Cabaña en Cañete Province" class="listing-card__image">
+                        <div class="listing-card__badge">Favorito entre huéspedes</div>
+                        <button class="listing-card__like">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false" class="listing-card__icon">
+                                <path
+                                    d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 class="listing-card__title">Cabaña en Cañete Province</h3>
+                    <p class="listing-card__info">S/2,100 por 2 noches • ★ 4.93</p>
+                </article>
+
+                <article class="listing-card">
+                    <div class="listing-card__image-wrapper">
+                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1424810688504338556/original/20060f09-9f9b-4cb4-a377-9094f7548052.png?im_w=720" alt="Bungalow en Lunahuaná" class="listing-card__image">
+                        <div class="listing-card__badge">Favorito entre huéspedes</div>
+                        <button class="listing-card__like">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false" class="listing-card__icon">
+                                <path
+                                    d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 class="listing-card__title">Bungalow en Lunahuaná</h3>
+                    <p class="listing-card__info">S/1,160 por 2 noches • ★ 5.0</p>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="listing-section o-container">
+            <div class="listing-section__header">
+                <a href="#" class="listing-section__title">Descubre alojamientos cerca de Trujillo ›</a>
+                <div class="listing-section__arrows">
+                    <button class="listing-section__arrow listing-section__arrow--left">
+                        <span data-button-content="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false"
+                                style="display: block; fill: none; height: 12px; width: 12px; stroke: currentcolor; stroke-width: 4; overflow: visible;">
+                                <path fill="none" d="M20 28 8.7 16.7a1 1 0 0 1 0-1.4L20 4"></path>
+                            </svg></span>
+                    </button>
+                    <button class="listing-section__arrow listing-section__arrow--right">
+                        <span data-button-content="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false"
+                                style="display: block; fill: none; height: 12px; width: 12px; stroke: currentcolor; stroke-width: 4; overflow: visible;">
+                                <path fill="none" d="m12 4 11.3 11.3a1 1 0 0 1 0 1.4L12 28"></path>
+                            </svg></span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="listing-section__carousel">
+                <article class="listing-card">
+                    <div class="listing-card__image-wrapper">
+                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1371714259688398282/original/f80f2bc7-b50c-4d9b-97b3-0b10be5b88eb.jpeg?im_w=720" alt="Apartamrnto en Trujillo" class="listing-card__image">
+                        <div class="listing-card__badge">Favorito entre huéspedes</div>
+                        <button class="listing-card__like">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false" class="listing-card__icon">
+                                <path
+                                    d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 class="listing-card__title">Apartamrnto en Trujillo</h3>
+                    <p class="listing-card__info">S/239 por 2 noches • ★ 4.96</p>
+                </article>
+                
+                <article class="listing-card">
+                    <div class="listing-card__image-wrapper">
+                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1189146102222560028/original/5eb2a861-dd87-4275-a6a6-5c4808e7e2ee.jpeg?im_w=720" alt="Apartamento en Trujillo" class="listing-card__image">
+                        <div class="listing-card__badge">Favorito entre huéspedes</div>
+                        <button class="listing-card__like">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false" class="listing-card__icon">
+                                <path
+                                    d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 class="listing-card__title">Apartamento en Trujillo</h3>
+                    <p class="listing-card__info">S/440 por 2 noches • ★ 4.97</p>
+                </article>
+
+                <article class="listing-card">
+                    <div class="listing-card__image-wrapper">
+                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1122666818568598930/original/ae52da5c-317c-4040-a713-207f10504c8c.png?im_w=720" alt="Loft en Huanchaco" class="listing-card__image">
+                        <div class="listing-card__badge">Favorito entre huéspedes</div>
+                        <button class="listing-card__like">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false" class="listing-card__icon">
+                                <path
+                                    d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 class="listing-card__title">Loft en Huanchaco</h3>
+                    <p class="listing-card__info">S/249 por 2 noches • ★ 4.89</p>
+                </article>
+
+                <article class="listing-card">
+                    <div class="listing-card__image-wrapper">
+                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1289834841673862865/original/69376f66-37af-4445-8f3c-d44d3987329f.jpeg?im_w=720" alt="Apartamento en Trujillo" class="listing-card__image">
+                        <div class="listing-card__badge">Favorito entre huéspedes</div>
+                        <button class="listing-card__like">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false" class="listing-card__icon">
+                                <path
+                                    d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 class="listing-card__title">Apartamento en Trujillo</h3>
+                    <p class="listing-card__info">S/290 por 2 noches • ★ 5.0</p>
+                </article>
+
+                <article class="listing-card">
+                    <div class="listing-card__image-wrapper">
+                        <img src="https://a0.muscache.com/im/pictures/miso/Hosting-1318291651136026051/original/b80943ef-5c63-4ecb-b0c1-ef30b251144d.jpeg?im_w=720" alt="Apartamento en Víctor Larco Herrera" class="listing-card__image">
+                        <div class="listing-card__badge">Favorito entre huéspedes</div>
+                        <button class="listing-card__like">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false" class="listing-card__icon">
+                                <path
+                                    d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 class="listing-card__title">Apartamento en Víctor Larco Herrera</h3>
+                    <p class="listing-card__info">S/327 por 2 noches • ★ 5.0</p>
+                </article>
+
+                <article class="listing-card">
+                    <div class="listing-card__image-wrapper">
+                        <img src="https://a0.muscache.com/im/pictures/miso/Hosting-1205431149591613212/original/c005fb87-8e86-43ce-aad8-99a04c63b689.jpeg?im_w=720" alt="Habitación en Trujillo" class="listing-card__image">
+                        <div class="listing-card__badge">Favorito entre huéspedes</div>
+                        <button class="listing-card__like">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false" class="listing-card__icon">
+                                <path
+                                    d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 class="listing-card__title">Habitación en Trujillo</h3>
+                    <p class="listing-card__info">S/80 por 2 noches • ★ 5.0</p>
+                </article>
+
+                <article class="listing-card">
+                    <div class="listing-card__image-wrapper">
+                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1095846449402521835/original/6ae9eb0a-e6d1-43b4-abe8-702509bfec62.jpeg?im_w=720" alt="Apartamento en Víctor Larco Herrera" class="listing-card__image">
+                        <div class="listing-card__badge">Favorito entre huéspedes</div>
+                        <button class="listing-card__like">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false" class="listing-card__icon">
+                                <path
+                                    d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 class="listing-card__title">Apartamento en Víctor Larco Herrera</h3>
+                    <p class="listing-card__info">S/215 por 2 noches • ★ 4.92</p>
+                </article>
+
+                <article class="listing-card">
+                    <div class="listing-card__image-wrapper">
+                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTE1Mjk5NDkzOTAzNzEyMjM4NA%3D%3D/original/0b5b1720-1e7e-4fdb-aa35-3718b93decb7.jpeg?im_w=720" alt="Apartamento en Víctor Larco Herrera" class="listing-card__image">
+                        <div class="listing-card__badge">Favorito entre huéspedes</div>
+                        <button class="listing-card__like">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false" class="listing-card__icon">
+                                <path
+                                    d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 class="listing-card__title">Apartamento en Víctor Larco Herrera</h3>
+                    <p class="listing-card__info">S/231 por 2 noches • ★ 4.93</p>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="listing-section o-container">
+            <div class="listing-section__header">
+                <a href="#" class="listing-section__title">Alojamientos populares en Huaraz ›</a>
+                <div class="listing-section__arrows">
+                    <button class="listing-section__arrow listing-section__arrow--left">
+                        <span data-button-content="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false"
+                                style="display: block; fill: none; height: 12px; width: 12px; stroke: currentcolor; stroke-width: 4; overflow: visible;">
+                                <path fill="none" d="M20 28 8.7 16.7a1 1 0 0 1 0-1.4L20 4"></path>
+                            </svg></span>
+                    </button>
+                    <button class="listing-section__arrow listing-section__arrow--right">
+                        <span data-button-content="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false"
+                                style="display: block; fill: none; height: 12px; width: 12px; stroke: currentcolor; stroke-width: 4; overflow: visible;">
+                                <path fill="none" d="m12 4 11.3 11.3a1 1 0 0 1 0 1.4L12 28"></path>
+                            </svg></span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="listing-section__carousel">
+                <article class="listing-card">
+                    <div class="listing-card__image-wrapper">
+                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1408295628762541105/original/bc65fc74-001f-436c-893e-b9dc0161e388.jpeg?im_w=720" alt="Habitación en Huaraz" class="listing-card__image">
+                        <div class="listing-card__badge">Favorito entre huéspedes</div>
+                        <button class="listing-card__like">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false" class="listing-card__icon">
+                                <path
+                                    d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 class="listing-card__title">Habitación en Huaraz</h3>
+                    <p class="listing-card__info">S/182 por 2 noches • ★ 5.0</p>
+                </article>
+                
+                <article class="listing-card">
+                    <div class="listing-card__image-wrapper">
+                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1213867388618999683/original/726d429b-c455-4d24-8ca8-a95326180b97.jpeg?im_w=720" alt="Casa de huéspedes en Huaraz" class="listing-card__image">
+                        <div class="listing-card__badge">Favorito entre huéspedes</div>
+                        <button class="listing-card__like">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false" class="listing-card__icon">
+                                <path
+                                    d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 class="listing-card__title">Casa de huéspedes en Huaraz</h3>
+                    <p class="listing-card__info">S/129 por 2 noches • ★ 4.8</p>
+                </article>
+
+                <article class="listing-card">
+                    <div class="listing-card__image-wrapper">
+                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1335843446579882380/original/97586af0-0f07-4323-bc98-bcc19d47b755.jpeg?im_w=720" alt="Apartamento en Huaraz" class="listing-card__image">
+                        <div class="listing-card__badge">Favorito entre huéspedes</div>
+                        <button class="listing-card__like">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false" class="listing-card__icon">
+                                <path
+                                    d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 class="listing-card__title">Apartamento en Huaraz</h3>
+                    <p class="listing-card__info">S/243 por 2 noches • ★ 4.89</p>
+                </article>
+
+                <article class="listing-card">
+                    <div class="listing-card__image-wrapper">
+                        <img src="https://a0.muscache.com/im/pictures/miso/Hosting-1464812984313402764/original/12ed6b9e-75e2-4921-bb42-a3ae1ac9e4b5.jpeg?im_w=720" alt="Apartamento en Huaraz" class="listing-card__image">
+                        <div class="listing-card__badge">Favorito entre huéspedes</div>
+                        <button class="listing-card__like">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false" class="listing-card__icon">
+                                <path
+                                    d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 class="listing-card__title">Apartamento en Huaraz</h3>
+                    <p class="listing-card__info">S/380 por 2 noches • ★ 5.0</p>
+                </article>
+
+                <article class="listing-card">
+                    <div class="listing-card__image-wrapper">
+                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1016172161068070165/original/c79a52a1-1f93-4499-9377-88b30fd58fd9.jpeg?im_w=720" alt="Habitación en Huaraz" class="listing-card__image">
+                        <div class="listing-card__badge">Favorito entre huéspedes</div>
+                        <button class="listing-card__like">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false" class="listing-card__icon">
+                                <path
+                                    d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 class="listing-card__title">Habitación en Huaraz</h3>
+                    <p class="listing-card__info">S/129 por 2 noches • ★ 4.94</p>
+                </article>
+
+                <article class="listing-card">
+                    <div class="listing-card__image-wrapper">
+                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1259737971214618338/original/cfaa40f9-bf1b-4713-9a76-50a34fef2d4e.jpeg?im_w=720" alt="Casa de huéspedes en Huaraz" class="listing-card__image">
+                        <div class="listing-card__badge">Favorito entre huéspedes</div>
+                        <button class="listing-card__like">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false" class="listing-card__icon">
+                                <path
+                                    d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 class="listing-card__title">Casa de huéspedes en Huaraz</h3>
+                    <p class="listing-card__info">S/129 por 2 noches • ★ 4.86</p>
+                </article>
+
+                <article class="listing-card">
+                    <div class="listing-card__image-wrapper">
+                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1399532380094965348/original/e907c389-cd17-45f2-b112-d1a835909894.jpeg?im_w=720" alt="Apartamento en Huaraz" class="listing-card__image">
+                        <button class="listing-card__like">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false" class="listing-card__icon">
+                                <path
+                                    d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 class="listing-card__title">Apartamento en Huaraz</h3>
+                    <p class="listing-card__info">S/584 por 2 noches • ★ 4.8</p>
+                </article>
+
+                <article class="listing-card">
+                    <div class="listing-card__image-wrapper">
+                        <img src="https://a0.muscache.com/im/pictures/d1b99bd5-289b-4a80-989c-0e87423f65cd.jpg?im_w=720" alt="Apartamento en Huaraz" class="listing-card__image">
+                        <button class="listing-card__like">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false" class="listing-card__icon">
+                                <path
+                                    d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 class="listing-card__title">Apartamento en Huaraz</h3>
+                    <p class="listing-card__info">S/588 por 2 noches • ★ 4.89</p>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="footer">
+        <div class="footer__top o-container">
+            <h2 class="footer__heading">Inspiración para escapadas futuras</h2>
+        </div>
+
+        <div class="footer__columns o-container">
+            <div class="footer__column">
+                <h3 class="footer__title">Asistencia</h3>
+                <ul class="footer__list">
+                    <li class="footer__item"><a href="#">Centro de ayuda</a></li>
+                    <li class="footer__item"><a href="#">AirCover</a></li>
+                    <li class="footer__item"><a href="#">Antidiscriminación</a></li>
+                    <li class="footer__item"><a href="#">Apoyo para discapacitados</a></li>
+                    <li class="footer__item"><a href="#">Opciones de cancelación</a></li>
+                    <li class="footer__item"><a href="#">Problemas en el vecindario</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__column">
+                <h3 class="footer__title">Modo anfitrión</h3>
+                <ul class="footer__list">
+                    <li class="footer__item"><a href="#">Pon tu espacio en Airbnb</a></li>
+                    <li class="footer__item"><a href="#">Ofrece tu experiencia en Airbnb</a></li>
+                    <li class="footer__item"><a href="#">Ofrece tu servicio en Airbnb</a></li>
+                    <li class="footer__item"><a href="#">AirCover para anfitriones</a></li>
+                    <li class="footer__item"><a href="#">Recursos para anfitrionar</a></li>
+                    <li class="footer__item"><a href="#">Foro comunitario</a></li>
+                    <li class="footer__item"><a href="#">Anfitriona con responsabilidad</a></li>
+                    <li class="footer__item"><a href="#">Súmate a una clase gratuita</a></li>
+                    <li class="footer__item"><a href="#">Buscar un coanfitrión</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__column">
+                <h3 class="footer__title">Airbnb</h3>
+                <ul class="footer__list">
+                    <li class="footer__item"><a href="#">Novedades de mayo de 2025</a></li>
+                    <li class="footer__item"><a href="#">Sala de prensa</a></li>
+                    <li class="footer__item"><a href="#">Carreras</a></li>
+                    <li class="footer__item"><a href="#">Inversionistas</a></li>
+                    <li class="footer__item"><a href="#">Espacios en Airbnb.org</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer__bottom o-container">
+            <div class="footer__legal">
+                <p>© 2025 Airbnb, Inc.</p>
+                <a href="#">Privacidad</a>
+                <span> • </span>
+                <a href="#">Términos</a>
+                <span> • </span>
+                <a href="#">Mapa del sitio</a>
+            </div>
+            <div class="footer__lang-currency">
+                <span class="lang-currency__language">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-hidden="true" role="presentation"
+                        focusable="false" class="header__icon">
+                        <path
+                            d="M8 .25a7.77 7.77 0 0 1 7.75 7.78 7.75 7.75 0 0 1-7.52 7.72h-.25A7.75 7.75 0 0 1 .25 8.24v-.25A7.75 7.75 0 0 1 8 .25zm1.95 8.5h-3.9c.15 2.9 1.17 5.34 1.88 5.5H8c.68 0 1.72-2.37 1.93-5.23zm4.26 0h-2.76c-.09 1.96-.53 3.78-1.18 5.08A6.26 6.26 0 0 0 14.17 9zm-9.67 0H1.8a6.26 6.26 0 0 0 3.94 5.08 12.59 12.59 0 0 1-1.16-4.7l-.03-.38zm1.2-6.58-.12.05a6.26 6.26 0 0 0-3.83 5.03h2.75c.09-1.83.48-3.54 1.06-4.81zm2.25-.42c-.7 0-1.78 2.51-1.94 5.5h3.9c-.15-2.9-1.18-5.34-1.89-5.5h-.07zm2.28.43.03.05a12.95 12.95 0 0 1 1.15 5.02h2.75a6.28 6.28 0 0 0-3.93-5.07z">
+                        </path>
+                    </svg>
+                    <b>Español (PE)</b>
+                </span>
+                <span><b>S/. PEN</b></span>
+                <span>
+                    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block; height: 16px; width: 16px; fill: currentcolor;"><path d="m15.9700599 1c-8.26766469 0-14.9700599 6.70239521-14.9700599 14.9700599 0 7.0203593 4.83353293 12.9113772 11.3538922 14.5293413v-9.954491h-3.08682633v-4.5748503h3.08682633v-1.9712575c0-5.09520959 2.305988-7.45688623 7.3083832-7.45688623.948503 0 2.58503.18622754 3.2544911.37185629v4.14670654c-.3532934-.0371257-.9670659-.0556886-1.7293414-.0556886-2.454491 0-3.402994.9299401-3.402994 3.3473054v1.6179641h4.8898204l-.8401198 4.5748503h-4.0497006v10.2856287c7.4125749-.8952096 13.1562875-7.2065868 13.1562875-14.860479-.0005988-8.26766469-6.702994-14.9700599-14.9706587-14.9700599z"></path></svg>
+                </span>
+                <span>
+                    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block; height: 16px; width: 16px; fill: currentcolor;"><path d="m18.461198 13.6964303 10.9224206-12.6964303h-2.5882641l-9.4839364 11.024132-7.57479218-11.024132h-8.73662592l11.4545721 16.6704401-11.4545721 13.3141565h2.58841076l10.01528114-11.6418582 7.9995355 11.6418582h8.7366259l-11.879291-17.2881663zm-3.5451833 4.1208802-1.1605868-1.66-9.23437656-13.20879216h3.97564793l7.45224943 10.65991686 1.1605868 1.66 9.6870415 13.8562592h-3.9756479l-7.9049144-11.3067482z"></path></svg>
+                </span>
+                <span>
+                    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block; height: 16px; width: 16px; fill: currentcolor;"><path d="m9.78762432 1.10490642c-1.596.0753-2.6859.33-3.6387.7044-.9861.3843-1.8219.9-2.6535 1.7346s-1.3437 1.671-1.7253 2.6586c-.3693.9549-.6195 2.0457-.69 3.6426-.0705 1.59689998-.0861 2.11019998-.0783 6.18359998s.0258 4.584.1032 6.1842c.0762 1.5957.33 2.6853.7044 3.6384.3849.9861.9 1.8216 1.7349 2.6535s1.6707 1.3428 2.6607 1.725c.954.3687 2.0451.6201 3.6417.69 1.59659998.0699 2.11049998.0861 6.18269998.0783s4.5849-.0258 6.1848-.1017 2.6838-.3315 3.6372-.7041c.9861-.3858 1.8222-.9 2.6535-1.7352s1.3431-1.6722 1.7244-2.6604c.3696-.954.6207-2.0451.69-3.6405.0699-1.6011.0864-2.1123.0786-6.1851s-.0261-4.5834-.102-6.18299998c-.0759-1.5996-.33-2.6859-.7041-3.6396-.3855-.9861-.9-1.821-1.7346-2.6535s-1.6722-1.344-2.6601-1.7244c-.9546-.3693-2.0451-.621-3.6417-.69s-2.1105-.0867-6.1842-.0789-4.5837.0252-6.18359998.1032m.1752 27.11639998c-1.4625-.0636-2.2566-.3066-2.7858-.51-.7008-.27-1.2-.5964-1.7274-1.1187s-.8514-1.0233-1.125-1.7226c-.2055-.5292-.453-1.3224-.5214-2.7849-.0744-1.5807-.09-2.0553-.0987-6.06s.0066-4.4787.0759-6.05999998c.0624-1.4613.3069-2.2563.51-2.7852.27-.7017.5952-1.2 1.1187-1.7271s1.023-.8517 1.7229-1.1253c.5286-.2064 1.3218-.4518 2.7837-.5214 1.58189998-.075 2.05589998-.09 6.05999998-.0987s4.4793.0063 6.0618.0759c1.4613.0636 2.2566.3057 2.7849.51.7011.27 1.2.5943 1.7271 1.1187s.852 1.0221 1.1256 1.7235c.2067.5271.4521 1.32.5211 2.7828.0753 1.58189998.0924 2.05619998.0996 6.05999998s-.0069 4.4793-.0762 6.06c-.0639 1.4625-.3063 2.2569-.51 2.7867-.27.7005-.5955 1.2-1.1193 1.7268s-1.0227.8514-1.7229 1.125c-.528.2061-1.3221.4521-2.7828.5217-1.5819.0744-2.0559.09-6.0615.0987s-4.4781-.0075-6.05999998-.0759m12.22799748-20.23829998c.0012175.72808507.4409323 1.38373514 1.114083 1.66118326s1.4471512.12204713 1.9610409-.39373063.6664512-1.2903429.3865363-1.96247162c-.2799148-.67212872-.937173-1.10943617-1.6652577-1.10798463-.9938786.00199-1.7980584.80912438-1.7964025 1.80300362m-13.89301175 8.03189998c.00841427 4.254 3.46321425 7.6947 7.71631425 7.6866143 4.2531-.0081143 7.6962-3.4626143 7.6881143-7.7166143-.0081143-4.254-3.4638143-7.69559998-7.7175143-7.68721533-4.2537.00841535-7.69499998 3.46381533-7.68691425 7.71721533m2.70180425-.0054c-.0054522-2.761471 2.2287325-5.0045146 4.9902035-5.0099904 2.761471-.0054558 5.0045175 2.228726 5.009997 4.990197.0054593 2.761471-2.2287195 5.0045204-4.9901905 5.0100045-1.3261582.0027764-2.5990901-.5214481-3.5386825-1.4573271s-1.4688535-2.2067251-1.4713275-3.532884"></path></svg>
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const items = document.querySelectorAll('.search-bar__item');
+        const modals = document.querySelectorAll('.modal');
+
+        items.forEach(item => {
+            item.addEventListener('click', () => {
+                // Remueve "activo" de todos
+                items.forEach(i => i.classList.remove('search-bar__item--active'));
+                item.classList.add('search-bar__item--active');
+
+                // Oculta todos los modales
+                modals.forEach(modal => modal.hidden = true);
+
+                // Muestra el modal correspondiente
+                const modalId = item.dataset.modal;
+                const modal = document.getElementById(`modal-${modalId}`);
+                if (modal) {
+                    modal.hidden = false;
+                }
+            });
+        });
+
+        const btnMenu = document.getElementById('btn-menu');
+        const modalMenu = document.getElementById('modal-menu');
+
+        btnMenu.addEventListener('click', (e) => {
+            e.stopPropagation();
+            modalMenu.hidden = !modalMenu.hidden;
+        });
+
+        document.addEventListener('click', () => {
+            modalMenu.hidden = true;
+        });
+    </script>
 </body>
+
 </html>

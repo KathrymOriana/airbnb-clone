@@ -6,7 +6,7 @@
   --secondary-color: #F2F2F2;
   --black-color: #010508;
   --white-color: #fefefe;
-  --gray-light: #E9E9E9;
+  --gray-light: #e8e8e8;
   
   --color-text: #222;
   --color-muted: #717171;
@@ -20,7 +20,7 @@
   --transition-duration: 0.25s;
 
   /* --radius-rounded: 30px; */
-  --shadow-default: 0px 5px 18px rgba(0, 0, 0, 0.15);
+  --shadow-default: 0px 4px 10px rgba(0, 0, 0, 0.15);
   --padding-default: calc(var(--size) * 2.5) calc(var(--size) * 4.5);
   --border-radius: calc(var(--size) * 7.5);
 

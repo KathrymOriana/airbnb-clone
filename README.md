@@ -5,7 +5,7 @@ This project is part of a front-end development challenge for educational purpos
 
 ## 🖼️ Preview
 
-![Preview Screenshot](./assets/images/preview.png)
+![Preview Screenshot](./assets/images/page-preview.png)
 
 ## 🎯 Objective
 

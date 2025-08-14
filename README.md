@@ -20,7 +20,6 @@ Recreate the visual structure of Airbnb's website using:
 
     airbnb-clone/
     ├── assets/
-    │   └── fonts/                  # Fonts
     │   └── images/                 # All static images
     ├── css/
     │   ├── main.css                # Main compiled CSS
